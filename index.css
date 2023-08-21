@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: linear-gradient(180deg, #2d8ce6, #e21c64);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.page {
+    position: relative;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: #fff;
+    height: 30rem;
+    width: 25rem;
+    border-radius: 20px 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 2);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 0.6rem;
+    text-align: center;
+}
+
+input {
+    padding: 13px 5rem 10px 1.4rem;
+    border: 0px solid #000;
+    border-radius: 4px 10px;
+    border-bottom: 1px solid #000;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 0.6rem;
+    transition: .5s;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 5px;
+    color: #fff;
+    background-image: linear-gradient(90deg, #2d8ce6, #e21c64);
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 14px;
+}
+
+p a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: .5s;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.loginPage {
+    position: absolute;
+    height: 27rem;
+}
+
+.loginPage h2 {
+    padding-bottom: 1rem;
+}
+
+.loginPage input {
+    margin-top: 1.3rem;
+}
+
+.loginPage button {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
