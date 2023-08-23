@@ -1,13 +1,10 @@
-document.getElementById('loginLink').addEventListener('click', () => {
-    window.location.href = 'next.html';
-});
-const Rform = document.getElementById('registerform');
-const Lform = document.getElementById('loginform');
+const rform = document.getElementById('registerform');
+const lform = document.getElementById('loginform');
 const message = document.getElementById('message');
 const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
 
-Rform.addEventListener('submit', function(e) {
+rform.addEventListener('submit', function(e) {
     //prevent emaildefault
     e.preventDefault();
 
@@ -16,11 +13,12 @@ Rform.addEventListener('submit', function(e) {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
+    //validation of password length
     if (password.length < 6) {
-        message.textContent = "password must be nothing less than 6"
-    } else {
-        message.textContent = ""
-    }
+        message.textContent = "password must be nothing less than 6 words";
+        return;
+    };
+
     //localstorage
     //creating user object
     const user = {
@@ -41,23 +39,24 @@ Rform.addEventListener('submit', function(e) {
 });
 
 
-Lform.addEventListener('submit', function(e) {
-    //prevent emailmdefault
-    e.preventdefault();
+lform.addEventListener('submit', (event) => {
+    //prevent emaildefault
+    event.preventdefault();
 
-    const Lemail = document.getElementById('Loginemail')
-    const Lpassword = document.getElementById('Loginpassword')
+    const Lmeassge = document.getElementById("msg");
+    const loginmain = document.getElementById("Loginemail").value;
+    const Lpassword = document.getElementById("Loginpassword").value;
 
-    //tessting the inputed value
+    //validation of password length
+    if (Lpassword.length < 6) {
+        Lmeassge.textContent = "password must be nothing less than 6 words";
+        console.log('no working');
+        return;
+    };
 
-    const emailValid = Lemail.test(Remail.value);
-    const passwordValid = Lpassword.test(Rpassword.value);
+    //test the inputed value
 
     //calling the action after test
 
-    if (emailValid) {
-        alert('Correct')
-    } else {
-        alert('Incorrect')
-    }
-})
+
+});
