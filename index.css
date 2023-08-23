@@ -106,3 +106,44 @@ p a:hover {
     padding: 0;
     margin: 0;
 }
+
+
+/* responsive view */
+
+
+/* for tablet veiw and bigger screen size*/
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    body {
+        min-height: 100vh;
+        width: auto;
+        background-size: cover;
+    }
+}
+
+
+/* for mobile view and smaller size*/
+
+@media (min-width: 240px) and (max-width: 480px) {
+    body {
+        width: auto;
+        height: auto;
+    }
+    .page {
+        width: 22rem;
+        height: 30rem;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    input {
+        font-weight: 500;
+    }
+    button {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    p {
+        font-size: 16px;
+    }
+}
