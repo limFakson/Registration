@@ -1,26 +1,30 @@
-document.getElementById('loginform').addEventListener('submit', (b) => {
+document.getElementById('loginform').addEventListener('submit', (b) =>{
     b.preventDefault();
 
-    const formEmail = document.getElementById("loginemail").value;
-    const lPassword = document.getElementById("loginpassword").value;
+    const formEmail = document.getElementById("loginemail");
+    const lPassword = document.getElementById("loginpassword");
     const err = document.getElementById("msg");
 
-    //call localstorage element
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-    // Find the user with the provided username/email and password
-    const user = existingUsers.find(
-        (user) => (user.email === formEmail) && user.password === lPassword);
+    //get the details inputed
+    const logindata = {
+        email: formEmail.value,
+        password: lPassword.value
+    }
 
-    if (user) {
-        // Redirect to the desired page after successful sign-in
-        localStorage.setItem('authenticated', formEmail);
-        localStorage.setItem('authenticated', lPassword);
-        console.log('valid');
-        window.location.href = 'index.html';
-        alert("Congratulations on signing in")
-    } else {
-        //const errorMessage = document.getElementById('errorMessage');
-        err.textContent = 'Invalid Email/Password.';
-        console.log('invalid');
+    //display inputed details
+    console.log( JSON.stringify(logindata));
+    
+    //retrieve the data stored inside the localstorag
+    const existingUsers = JSON.parse(localStorage.getItem('user'));
+    console.log(existingUsers);
+
+    const checkingdata = existingUsers.find(
+        (user)=> user.email === logindata.email && user.password === logindata.password
+    );
+
+    if (checkingdata) {
+        console.log('it' + " " + "valid");
+    }else{
+        console.log("wrong");
     }
 });

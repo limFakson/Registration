@@ -29,10 +29,10 @@ rform.addEventListener('click', function(e) {
         username: username
     };
     //overwrite user
-    existingUsers.push(user);
+    settingUsers.push(user);
 
     //set items inlocalstorage
-    localStorage.setItem('user', JSON.stringify(existingUsers));
+    localStorage.setItem('user', JSON.stringify(settingUsers));
 
     //reload page
     window.location.href = "next.html"
