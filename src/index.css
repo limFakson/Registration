@@ -39,7 +39,9 @@ h2 {
 }
 
 input {
-    padding: 13px 5rem 10px 1.4rem;
+    width: 18rem;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
     border: 0px solid #000;
     border-radius: 4px 10px;
     border-bottom: 1px solid #000;
@@ -107,6 +109,9 @@ p a:hover {
     margin: 0;
 }
 
+main{
+    background-color: #e21c64;
+}
 
 /* responsive view */
 

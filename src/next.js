@@ -24,7 +24,9 @@ document.getElementById('loginform').addEventListener('submit', (b) =>{
 
     if (checkingdata) {
         console.log('it' + " " + "valid");
+        window.location.href = "profile.html"
     }else{
         console.log("wrong");
+        err.textContent = "inputed details are wrong"
     }
 });
