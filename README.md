@@ -1,4 +1,4 @@
-Profile Registration and Login Validation
+<h1>Profile Registration and Login Validation</h1>
 
 Project Preview
 Description
