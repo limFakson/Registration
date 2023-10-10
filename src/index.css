@@ -111,6 +111,8 @@ p a:hover {
 
 main{
     background-color: #e21c64;
+    width: 100%;
+    height: 100vh;
 }
 
 /* responsive view */
