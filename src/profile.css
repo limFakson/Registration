@@ -1,0 +1,38 @@
+/* body{
+    display:flex;
+} */
+
+main{
+    background-color: #fff;
+    width: 60%;
+    height: 32rem;
+    border-radius: 20px 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 2);
+}
+
+.main-page{
+    display: flex;
+    width: auto;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.inner{
+    width: 60%;
+}
+
+.inner span img{
+    width: 100%;
+}
+
+.sec-inner{
+    width: 40%;
+    margin-top: 2rem;
+}
+h1{
+    font-size: 4rem;
+}
+
+p{
+    text-align: left;
+}
